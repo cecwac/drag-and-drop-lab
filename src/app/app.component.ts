@@ -33,6 +33,7 @@ export class AppComponent {
 
   logTouchStart(event: any) {
     console.log("logTouch", this.milliseconds);
+    navigator.vibrate(this.milliseconds);
   }
 
 }
