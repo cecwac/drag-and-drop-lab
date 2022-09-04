@@ -9,7 +9,9 @@
         <div class="col-md-12">
             <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)"
                 (cdkDropListSorted)="onDragExit()">
-                <div class="example-box" *ngFor="let movie of movies" cdkDrag (touchstart)="logTouchStart($event)">
+                <div class="example-box" *ngFor="let movie of movies" cdkDrag 
+                (touchstart)="logTouchStart($event)"
+                [cdkDragStartDelay]="100">
                     {{movie}}</div>
             </div>
         </div>
